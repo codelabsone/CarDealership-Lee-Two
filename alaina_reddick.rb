@@ -13,10 +13,11 @@ class Suv
 end
 suv= Suv.new(1991,"Ford","escape",294600,4455)
 puts suv
-uv= Suv.new(1998,"Chevy","Blazer",120399,2342)
+suv= Suv.new(1998,"Chevy","Blazer",120399,2342)
 puts suv
 suv= Suv.new(2003,"Kia", "Sportage",219864,3213)
 puts suv
 suv= Suv.new(2009,"Dodge","Nitro",323990,9933)
 puts suv
 suv= Suv.new(2010,"Chevy","Arcadia",200019,9752)
+puts suv
