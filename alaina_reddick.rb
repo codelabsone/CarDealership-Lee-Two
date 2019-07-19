@@ -1,8 +1,8 @@
 class Suv
   def initialize (year, make, model, mileage, price)
     @year= year
-    @make= make
-    @model= model
+    @make= make.upcase
+    @model= model.upcase
     @mileage= mileage
     @price= price
   end
@@ -11,7 +11,7 @@ class Suv
 
   end
 end
-suv= Suv.new(1991,"Ford","Escape",294600,4455)
+suv= Suv.new(1991,"Ford","escape",294600,4455)
 puts suv
 uv= Suv.new(1998,"Chevy","Blazer",120399,2342)
 puts suv
