@@ -1,5 +1,5 @@
 
-#create to seperate arrays
+#create two seperate arrays
 car1 = ["car", "Ford", "Fusion"]
 car2 = ["car",'Toyota', 'corolla']
 #nest the arrays in another array
