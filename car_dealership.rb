@@ -1,4 +1,13 @@
 class Car
+
+  attr_accessor :category
+  attr_accessor :year
+  attr_accessor :make
+  attr_accessor :model
+  attr_accessor :mileage
+  attr_accessor :message
+
+
   def initialize(category,year,make,model,mileage,message)
     @year = year
     @make = make.capitalize
@@ -12,16 +21,26 @@ end
 
 class Inventory
   def initialize(car)
-    @cars=[]
+    @cars=[
 
+    ]
+ cars.new
   end
+
+
 
 
   def search
-
+    
   end
 end
 
+
+inventory = Inventory.new
+
+inventory.cars.each do |car|
+  puts car.year
+end
 
 
 
@@ -75,6 +94,15 @@ end
 # puts vans
 
 
+def initialize
+
+@cars = [
+  Car.new(),
+  Car.new(),
+  CAr.new()
+]
+end
+
 
 
 
@@ -125,3 +153,4 @@ end
 # current_time = Time.new
 # formatted_time = current_time.strftime("%A %m/%d/%Y at %I:%M%p")
 # puts "Here is our inventory as of #{formatted_time}."
+
