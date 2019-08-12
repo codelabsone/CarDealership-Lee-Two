@@ -44,3 +44,8 @@
 @cars.new [Car, 2017, mini_cooper, countryman, "29,987", "small things come in a small package"]
 @cars.new [Car, 2019, chevrolet, corvette_zO6, "1,001" "if it's personality you need here it is"]
 @cars.new [Car, 2020, chevrolet, corvette_c8, "9","be one of the first to get a piece of history"]
+@cars.new [suv,1991,"Ford","Escape","294,600", "an oldie but a goodie"]
+@cars.new [suv, 1998,"Chevy","Blazer","120,399","has exceptional mileage for the age"]
+@cars.new [suv,2003,"Kia", "Sportage","219,864","great first car"]
+@cars.new [suv,2009,"Dodge","Nitro","323,990","not too bad"]
+@cars.new [suv,2010,"Chevy","Arcadia","200,019","nice and cold air conditioner"]
