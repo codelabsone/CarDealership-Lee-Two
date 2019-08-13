@@ -1,46 +1,79 @@
-class Car
 
-  attr_accessor :category
-  attr_accessor :year
-  attr_accessor :make
-  attr_accessor :model
-  attr_accessor :mileage
-  attr_accessor :message
+  class Cars
 
+    attr_accessor :category, :year,:make,:model,:mileage,:message
 
-  def initialize(category,year,make,model,mileage,message)
-    @year = year
-    @make = make.capitalize
-    @model = model.capitalize
-    @mileage = mileage
-    @message = message
-    @category = category
-  end
-end
+    def initialize(category,year,make,model,mileage,message)
+      @year = year
+      @make = make.capitalize
+      @model = model.capitalize
+      @mileage = mileage
+      @message = message
+      @category = category
+    end
 
-
-class Inventory
-  def initialize(car)
-    @cars=[
-
-    ]
- cars.new
+    def to_s
+      "We have a #{@model}"
+    end
   end
 
 
+  class Inventory
+    attr_accessor :inventory
+    attr_accessor :cars
+    def initialize(name)
+      @name = name
+      @inventory = []
+      @category = []
+    end
+    def add_car(car)
+      @inventory << car
+      @category << car.category
+      @category = @category.uniq
+    end
+
+    def welcome
+      "welcome to #{@name}."
+       "To begin, we'd like to ask you a few questions:"
+    end
+
+    def search
+      input = gets.chomp
+      @select = @cars.select {|c| c == input.to_s}
+
+    end
+
+    def category
+      @category.each do |c|
+        print "We have #{c}s, "
+        end
+    end
+
+    def car_matcher
+      puts welcome
+      puts "What type of vehicle are you looking for?"
+      category
+      puts ''
+    print ':  '
+        loop do
+          ans = gets.chomp
+          case ans
+          when "car", 'suv', 'truck'
+            @inventory.each do |t|
+            Fetcher.fetch(t, ans)
+          end
+          break
+          else
+            puts "I'm sorry but we don't have that type of vehicle"
+            category
+            puts ''
+          print ':  '
+          end
+        end
+      end
+    end
 
 
-  def search
-    
-  end
-end
-
-
-inventory = Inventory.new
-
-inventory.cars.each do |car|
-  puts car.year
-end
 
 
 
@@ -49,14 +82,17 @@ end
 
 
 
+# class Inventory
+#   def initialize(car)
+#     @cars=[]
 
 
 
-
-
-
-
-
+# inventory = Inventory.new
+#
+# inventory.cars.each do |car|
+#   puts car
+# end
 
 
 # class Vans
@@ -84,8 +120,8 @@ end
 #
 # vans = []
 #
-#             #Inventory
-# car0 = Vans.new(96,"honda","odyssey","25,000", "is the perfect car for a growing family", 16500)
+            #Inventory
+# car0 = Vans.new()
 # car1 = Vans.new("02","toyota","sienna","22,000", "can carry the whole soccer team", 15240)
 # car2 = Vans.new(99,"lincoln","navigator","23,000", "the car all the MILFS want", 22000)
 # car3 = Vans.new("04","kia","telluride","18,000", "practically drives for you", 14000)
