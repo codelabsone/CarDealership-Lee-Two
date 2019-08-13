@@ -8,7 +8,7 @@ class Car
     @price = price
     @mileage= mileage
     @message = message
-    @category = category.to_s
+    @category = category
   end
 
   def to_s
