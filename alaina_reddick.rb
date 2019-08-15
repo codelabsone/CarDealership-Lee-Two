@@ -1,5 +1,0 @@
-@cars.new [suv,1991,"Ford","Escape","294,600", "an oldie but a goodie"]
-@cars.new [suv, 1998,"Chevy","Blazer","120,399","has exceptional mileage for the age"]
-@cars.new [suv,2003,"Kia", "Sportage","219,864","great first car"]
-@cars.new [suv,2009,"Dodge","Nitro","323,990","not too bad"]
-@cars.new [suv,2010,"Chevy","Arcadia","200,019","nice and cold air conditioner"]
