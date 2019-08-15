@@ -1,0 +1,9 @@
+require_realtive "inventory"
+
+def load (from_inventory)
+  File.readlines ("iventory.rb").each do |file|
+    catagory,year, make, model, mileage, message = line.split (',')
+    cars= Cars.new (catagory, year.to_s, make, model, mileage.to_s)
+    add cars
+  end
+end
